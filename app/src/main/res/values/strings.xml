@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bimbel</string>
+    <string name="title_activity_homepage">MainActivity</string>
+    <string name="title_home">Counter</string>
+    <string name="title_dashboard">Area</string>
+    <string name="title_notifications">Volume</string>
+
+</resources>
+

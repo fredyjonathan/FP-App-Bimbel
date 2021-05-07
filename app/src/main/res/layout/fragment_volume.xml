@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ui.volume.VolumeFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/labelvolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Volume"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnbalok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/labelvolume"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#00B4DE"
+        android:background="@drawable/roundedbtn"
+        android:layout_marginLeft="30dp"
+        android:drawableTop="@drawable/balok"
+        android:text="Balok"/>
+
+    <Button
+        android:id="@+id/btnpiramid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/labelvolume"
+        app:layout_constraintStart_toEndOf="@id/btnbalok"
+        app:layout_constraintEnd_toStartOf="@id/btntabung"
+        android:backgroundTint="#00B4DE"
+        android:background="@drawable/roundedbtn"
+        android:drawableTop="@drawable/pyramid"
+        android:text="Piramid"/>
+
+    <Button
+        android:id="@+id/btntabung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/labelvolume"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#00B4DE"
+        android:background="@drawable/roundedbtn"
+        android:layout_marginRight="30dp"
+        android:drawableTop="@drawable/cilinder"
+        android:text="Tabung"/>
+
+    <TextView
+        android:id="@+id/volcalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:padding="50dp"
+        android:textSize="50dp"
+        app:layout_constraintTop_toBottomOf="@id/btnbalok"/>
+
+    <TextView
+        android:id="@+id/hintpanjangbalok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input panjang balok (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/volcalc"/>
+
+    <EditText
+        android:id="@+id/inputpanjangbalok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/hintpanjangbalok"/>
+
+    <TextView
+        android:id="@+id/hintlebarbalok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input lebar balok (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inputpanjangbalok"/>
+
+    <EditText
+        android:id="@+id/inputlebarbalok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/hintlebarbalok"/>
+
+    <TextView
+        android:id="@+id/hinttinggibalok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input tinggi balok (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inputlebarbalok"/>
+
+    <EditText
+        android:id="@+id/inputtinggibalok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/hinttinggibalok"/>
+
+    <Button
+        android:id="@+id/Hitungbalok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:background="@drawable/roundedbtn"
+        app:layout_constraintTop_toBottomOf="@id/inputtinggibalok"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Hitungbalok"
+        android:padding="50dp"/>
+
+    <TextView
+        android:id="@+id/hintalaspiramid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input sisi piramid (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/volcalc"/>
+
+    <EditText
+        android:id="@+id/inputalaspiramid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/hintalaspiramid"/>
+
+    <TextView
+        android:id="@+id/hinttinggipiramid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input tinggi piramid (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/inputalaspiramid"/>
+
+    <EditText
+        android:id="@+id/inputtinggipiramid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/hinttinggipiramid"/>
+
+    <Button
+        android:id="@+id/Hitungpiramid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:visibility="invisible"
+        android:background="@drawable/roundedbtn"
+        app:layout_constraintTop_toBottomOf="@id/inputtinggipiramid"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Hitungpiramid"
+        android:padding="50dp"/>
+
+    <TextView
+        android:id="@+id/hintjaritabung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input jari-jari tabung (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/volcalc"/>
+
+    <EditText
+        android:id="@+id/inputjaritabung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/hintjaritabung"/>
+
+    <TextView
+        android:id="@+id/hinttinggitabung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input tinggi tabung (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/inputjaritabung"/>
+
+    <EditText
+        android:id="@+id/inputtinggitabung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/hinttinggitabung"/>
+
+    <Button
+        android:id="@+id/Hitungtabung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:visibility="invisible"
+        android:background="@drawable/roundedbtn"
+        app:layout_constraintTop_toBottomOf="@id/inputtinggitabung"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Hitungtabung"
+        android:padding="50dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

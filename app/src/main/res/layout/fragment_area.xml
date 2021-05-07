@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ui.area.AreaFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/labelarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Area"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btnpersegi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/labelarea"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#00B4DE"
+        android:background="@drawable/roundedbtn"
+        android:layout_marginLeft="15dp"
+        android:drawableTop="@drawable/square"
+        android:text=" Persegi "/>
+
+    <Button
+        android:id="@+id/btnsegitiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/labelarea"
+        app:layout_constraintStart_toEndOf="@id/btnpersegi"
+        app:layout_constraintEnd_toStartOf="@id/btnlingkaran"
+        android:backgroundTint="#00B4DE"
+        android:background="@drawable/roundedbtn"
+        android:drawableTop="@drawable/triangle"
+        android:text="Segitiga"/>
+
+    <Button
+        android:id="@+id/btnlingkaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/labelarea"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#00B4DE"
+        android:background="@drawable/roundedbtn"
+        android:layout_marginRight="15dp"
+        android:drawableTop="@drawable/circle"
+        android:text="Lingkaran"/>
+
+    <TextView
+        android:id="@+id/areacalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:padding="50dp"
+        android:textSize="50dp"
+        app:layout_constraintTop_toBottomOf="@id/btnpersegi" />
+
+    <TextView
+        android:id="@+id/hintsisipersegi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Panjang Sisi (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/areacalc"/>
+
+    <EditText
+        android:id="@+id/inputpersegi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/hintsisipersegi"/>
+
+    <Button
+        android:id="@+id/Hitungpersegi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:background="@drawable/roundedbtn"
+        app:layout_constraintTop_toBottomOf="@id/inputpersegi"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Hitungpersegi"
+        android:padding="50dp"/>
+
+    <TextView
+        android:id="@+id/hintalassegitiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input alas segitiga (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/areacalc"/>
+
+    <EditText
+        android:id="@+id/inputalassegitiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/hintalassegitiga"/>
+
+    <TextView
+        android:id="@+id/hinttinggisegitiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input tinggi Segitiga (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/inputalassegitiga"/>
+
+    <EditText
+        android:id="@+id/inputtinggisegitiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/hinttinggisegitiga"/>
+
+    <Button
+        android:id="@+id/Hitungsegitiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:visibility="invisible"
+        android:background="@drawable/roundedbtn"
+        app:layout_constraintTop_toBottomOf="@id/inputtinggisegitiga"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Hitungsegitiga"
+        android:padding="50dp"/>
+
+    <TextView
+        android:id="@+id/pilihjd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Pilih: "
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/areacalc"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/jaridiameter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="100dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/areacalc"
+        app:layout_constraintStart_toEndOf="@id/pilihjd"/>
+
+    <TextView
+        android:id="@+id/hintlingkaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input diameter atau jari-jari (cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/pilihjd"/>
+
+    <EditText
+        android:id="@+id/inputlingkaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/borderline"
+        android:inputType="numberDecimal"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/hintlingkaran"/>
+
+    <Button
+        android:id="@+id/Hitunglingkaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:visibility="invisible"
+        android:background="@drawable/roundedbtn"
+        app:layout_constraintTop_toBottomOf="@id/inputlingkaran"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Hitunglingkaran"
+        android:padding="50dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
